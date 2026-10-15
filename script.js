@@ -33,6 +33,15 @@ form.addEventListener('submit', async (e) => {
     });
     const j = await r.json().catch(() => ({}));
     if (!r.ok) throw new Error(j.error || 'No se pudo enviar.');
+    // Evento para GTM (sin datos personales): úsalo como activador de conversión
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'generate_lead',
+      form_name: 'contacto_exportacion',
+      tipo_cafe: datos.tipo,
+      volumen: datos.volumen,
+      pais: datos.pais,
+    });
     form.reset();
     mostrar('¡Gracias! Recibimos tu consulta y te responderemos pronto.', 'ok');
   } catch (err) {
