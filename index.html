@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café de Exportación | Granos de origen para el mundo</title>
+<meta name="description" content="Venta de café verde de exportación: lotes especiales y comerciales, trazabilidad completa y logística internacional. Solicita tu cotización.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#inicio">☕ Café Origen</a>
+  <nav>
+    <a href="#productos">Productos</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#contacto" class="btn btn-small">Cotizar</a>
+  </nav>
+</header>
+
+<main>
+  <section id="inicio" class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Café verde de exportación</p>
+      <h1>Granos de origen, directo del productor a tu tostaduría.</h1>
+      <p class="lead">Lotes especiales y comerciales con trazabilidad completa, muestras previas al contrato y logística internacional FOB/CIF.</p>
+      <a href="#contacto" class="btn">Solicitar cotización</a>
+    </div>
+  </section>
+
+  <section id="productos" class="wrap">
+    <h2>Nuestros cafés</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Especialidad</h3>
+        <p>Puntaje SCA 84+. Lotes microlote y single origin, ideales para tostadores boutique.</p>
+      </article>
+      <article class="card">
+        <h3>Premium</h3>
+        <p>Café lavado, malla 16/18, taza limpia y consistente para volumen recurrente.</p>
+      </article>
+      <article class="card">
+        <h3>Comercial</h3>
+        <p>Grado exportación con precio competitivo para mezclas y grandes volúmenes.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="proceso" class="wrap">
+    <h2>Cómo trabajamos</h2>
+    <ol class="steps">
+      <li><strong>Consulta</strong> Cuéntanos tu perfil de taza y volumen.</li>
+      <li><strong>Muestra</strong> Te enviamos muestras para catación.</li>
+      <li><strong>Contrato</strong> Acordamos precio, incoterm y calendario.</li>
+      <li><strong>Embarque</strong> Preparamos documentos y despacho.</li>
+    </ol>
+  </section>
+
+  <section id="contacto" class="wrap contact">
+    <div>
+      <h2>Solicita tu cotización</h2>
+      <p>Completa el formulario y te responderemos en menos de 24 horas hábiles con precios y disponibilidad.</p>
+    </div>
+
+    <form id="form" novalidate>
+      <div class="grid">
+        <label>Nombre *
+          <input name="nombre" required autocomplete="name">
+        </label>
+        <label>Empresa *
+          <input name="empresa" required autocomplete="organization">
+        </label>
+        <label>Email *
+          <input name="email" type="email" required autocomplete="email">
+        </label>
+        <label>Teléfono
+          <input name="telefono" type="tel" autocomplete="tel">
+        </label>
+        <label>País de destino *
+          <input name="pais" required>
+        </label>
+        <label>Tipo de café *
+          <select name="tipo" required>
+            <option value="">Selecciona…</option>
+            <option>Especialidad</option>
+            <option>Premium</option>
+            <option>Comercial</option>
+            <option>Aún no lo sé</option>
+          </select>
+        </label>
+        <label>Volumen estimado *
+          <select name="volumen" required>
+            <option value="">Selecciona…</option>
+            <option>Muestra (hasta 5 kg)</option>
+            <option>1 – 5 sacos (69 kg c/u)</option>
+            <option>1 contenedor (275 sacos)</option>
+            <option>Más de 1 contenedor</option>
+          </select>
+        </label>
+      </div>
+      <label>Mensaje
+        <textarea name="mensaje" rows="4" placeholder="Perfil de taza, certificaciones, fechas de embarque…"></textarea>
+      </label>
+      <input type="text" name="web" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="check">
+        <input type="checkbox" name="acepta" required>
+        Acepto que me contacten por mi consulta comercial. *
+      </label>
+      <button class="btn" type="submit">Enviar consulta</button>
+      <p id="estado" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="anio"></span> Café Origen · Exportación de café verde</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
